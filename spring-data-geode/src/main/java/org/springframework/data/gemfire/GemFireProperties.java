@@ -32,6 +32,7 @@ import org.springframework.util.Assert;
  * An Enum (enumeration) of Apache Geode {@literal gemfire.properties}.
  *
  * @author John Blum
+ * @author Udo Kohlmeyer
  * @see org.apache.geode.distributed.ConfigurationProperties
  * @since 2.3.0
  */
@@ -64,7 +65,6 @@ public enum GemFireProperties {
 	ENABLE_TIME_STATISTICS(ConfigurationProperties.ENABLE_TIME_STATISTICS, Boolean.class, false),
 	ENFORCE_UNIQUE_HOST(ConfigurationProperties.ENFORCE_UNIQUE_HOST, Boolean.class, false),
 	//GEODE_DISALLOW_INTERNAL_MESSAGES_WITHOUT_CREDENTIALS("geode.disallow-internal-messages-without-credentials", Boolean.class, false),
-	GEODE_FOR_REDIS_USERNAME(ConfigurationProperties.GEODE_FOR_REDIS_USERNAME, String.class),
 	GROUPS(ConfigurationProperties.GROUPS, String.class),
 	HTTP_SERVICE_BIND_ADDRESS(ConfigurationProperties.HTTP_SERVICE_BIND_ADDRESS, String.class),
 	HTTP_SERVICE_PORT(ConfigurationProperties.HTTP_SERVICE_PORT, Integer.class, 7070),
@@ -100,10 +100,11 @@ public enum GemFireProperties {
 	NAME(ConfigurationProperties.NAME, String.class),
 	OFF_HEAP_MEMORY_SIZE(ConfigurationProperties.OFF_HEAP_MEMORY_SIZE, Integer.class),
 	REDUNDANCY_ZONE(ConfigurationProperties.REDUNDANCY_ZONE, String.class),
-	REDIS_ENABLED(ConfigurationProperties.GEODE_FOR_REDIS_ENABLED, Boolean.class),
 	REDIS_BIND_ADDRESS(ConfigurationProperties.GEODE_FOR_REDIS_BIND_ADDRESS, String.class),
+	REDIS_ENABLED(ConfigurationProperties.GEODE_FOR_REDIS_ENABLED, Boolean.class),
 	REDIS_PORT(ConfigurationProperties.GEODE_FOR_REDIS_PORT, Integer.class, 0),
 	REDIS_REDUNDANT_COPIES(ConfigurationProperties.GEODE_FOR_REDIS_REDUNDANT_COPIES, Integer.class, 1),
+	REDIS_USERNAME(ConfigurationProperties.GEODE_FOR_REDIS_USERNAME, String.class),
 	REMOTE_LOCATORS(ConfigurationProperties.REMOTE_LOCATORS, String.class),
 	REMOVE_UNRESPONSIVE_CLIENT(ConfigurationProperties.REMOVE_UNRESPONSIVE_CLIENT, Boolean.class, false),
 	SECURITY_AUTH_TOKEN_ENABLED_COMPONENTS(ConfigurationProperties.SECURITY_AUTH_TOKEN_ENABLED_COMPONENTS, String[].class),
